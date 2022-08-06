@@ -1,0 +1,21 @@
+html>
+    <head>
+        <title> Simple SignUp/SignIn app</title>
+    </head>
+    <body>
+<h1>Создайте запись на прием:</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="client_name">
+    </br>
+    <input type="text" name="message">
+    </br>
+    <input type="date" name="date">
+    <input type="submit">
+    </br>
+</form>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

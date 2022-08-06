@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<H2>Страница авторизованного пользователя {{ request.user.username }}</H2>
+<p align="center"><button>
+    {% if is_not_rival %}
+    <a href="sign/rival/">Хочу стать врагом</a>
+    {% endif %}
+    </button>
+</p>
+<div>Здесь может содержаться персональные данные пользователя</div>
+<button><a href="sign/logout/">Выйти</a> </button>
+
+{% endblock content %}
